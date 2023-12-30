@@ -1,18 +1,15 @@
 # Reddit Score Predictor
 
-This project aims to find out what makes a Reddit post popular and how well we can predict the score of a Reddit post using machine learning. This project consists of three main components: the data processing pipeline (Pipeline), analysis scripts (Analysis), and stored figures (Figures). Additionally, there are two models, **predict_score_old.py** and **predict_score_new.ipynb**.
+This project aims to find out what makes a Reddit post popular and how well we can predict the score of a Reddit post using machine learning. This project consists of three main components: the data processing pipeline (/pipeline), analysis scripts (/analysis), and stored figures (/figures). Additionally, there are two models, **predict_score_old.py** and **predict_score_new.ipynb**.
 
 ## Project Overview
 This project is organized into three main sections:
 
-**/pipeline**
-- The data processing pipeline responsible for cleaning, transforming, and preparing the Reddit data for analysis and modeling
+**/pipeline**: the data processing pipeline responsible for cleaning, transforming, and preparing the Reddit data for analysis and modeling
 
-**/analysis**
-- An investigation into the Reddit Posts dataset, our processed data, and the inital **predict_score_old.py** results. This section provides insights into the characteristics of Reddit posts and their scores.
+**/analysis**: an investigation into the Reddit Posts dataset, our processed data, and the inital **predict_score_old.py** results. This section provides insights into the characteristics of Reddit posts and their scores.
 
-**/figures**
-- Visualizations from **3-initial_analysis.py** used in our analysis
+**/figures**: visualizations from **3-initial_analysis.py** used in our analysis
 
 ## Approaches
 
