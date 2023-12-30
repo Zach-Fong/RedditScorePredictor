@@ -1,42 +1,29 @@
-# Reddit Submissions Analysis
+# Reddit Score Predictor
 
-## About This Project
-This project takes a look at (1) What makes a Reddit post popular and (2) How well can we predict the score of a Reddit post.
+This project aims to find out what makes a Reddit post popular and how well we can predict the score of a Reddit post using machine learning. This project consists of three main components: the data processing pipeline (Pipeline), analysis scripts (Analysis), and stored figures (Figures). Additionally, there are two models, **predict_score_old.py** and **predict_score_new.ipynb**. **predict_score_old.py** is the initial approach at predicting a posts score and **predict_score_new.ipynb** is the approach after reviewing the results of the inital model.
 
-This project has the initial investigation which consists of /ETL-Pipeline, /analysis, and /model-old.py.
-This project also has a revised 
+## Project Overview
+This project is organized into three main sections:
+**/pipeline**
+- The data processing pipeline responsible for cleaning, transforming, and preparing the Reddit data for analysis and modeling
+**/analysis**
+- An investigation into the Reddit Posts dataset, our processed data, and the inital **predict_score_old.py** results. This section provides insights into the characteristics of Reddit posts and their scores.
+**/figures**
+- Visualizations from **3-initial_analysis.py** used in our analysis
 
-## Required Libraries
+## Approaches
 
-pyspark, pandas, numpy, seaborn, matplotlib, scipy.stats
+### predict_score_old
+**predict_score-old.py** is the inital approach to predict the scores of Reddit posts. This was done using Spark's Linear Regression and was compared against a dummy regressor using the mean.
 
-## Project Structure
+### predict_score_new
+**predict_score_new.ipynb** is the revised approach to predict the scores of Reddit posts and analysis on its accuracy. This was done using Linear Regression, Random Forest Regression, KNN Regression, and Decision Tree Regression from Scikit-Learn. This approach also used both the mean and median as dummy regressors. This approach was done after reviewing the results from **predict_score_old.py**.
 
-/data-subsets
-- This is a directory containing the resampled and balanced dataset
-- Outputted as a result of running 3-initial_analysis.py
-
-/figures
-- Visualizations written to file from 3-initial_analysis.py
-
-/submissions-transformed
-- A **subset** of the outputted transformed data from running 2-transform.py on cluster
-
-## Order of Execution
-
-Begin by running the scripts in numbered order. 
-
-The following scripts should be run on the cluster in their named number order: 
-- 0-extract.py
-- 1-filter.py
-- 2-transform.py
-
-The folowing analysis scripts can be then run locally, with the submissions-transformed output data copied to an accessible directory
-- 3-initial_analysis.py
-- 4-relationship_analysis.py
-
-Lastly, the model.py script should be run on the cluster to avoid long training times.
-
-## Notes
-- The partial outputs of running 2-transform.py have been provided in the /submissions-transformed of the directory.
-- The inputs for the analysis in 4-relationship_analysis.py have also been included in /data-subsets.
+## Next Steps
+The aim of **predict_score_new.ipynb** was to improve the accuracy of **predict_score_old.py**, which it did. However, certain planned improvements, such as generating new features using semantic analysis and word embeddings, were hindered by a reduction in compute availability that we previously had access to.
+If we gain access to large compute power, we would also like to:
+- Generate new features using semantic analysis and word embeddings
+- Train a neural network and compare its results to the models we've already tested
+- Apply undersampling to posts with a low score as our dataset is heavily right skewed
+- Apply feature selection to improve the accuracy of our models
+- Apply hyperparameter tuning to all of our models
