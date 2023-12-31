@@ -21,7 +21,9 @@ $ pip install -r  requirements.txt
 
 2. Running the pipeline
 
-The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets we use can be found here: https://github.com/webis-de/webis-tldr-17-corpus. Run each file using:
+The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets we use can be found here: https://github.com/webis-de/webis-tldr-17-corpus.
+
+Run each file using:
 ```sh
 $ spark-submit \#-filename.py
 ```
