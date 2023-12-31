@@ -25,7 +25,7 @@ The data processing pipeline was originally created on a remote cluster that uti
 
 Run each file from lowest starting number to highest using:
 ```sh
-$ spark-submit \#-filename.py
+$ spark-submit #-filename.py
 ```
 
 3. Data analysis
