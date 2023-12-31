@@ -25,13 +25,15 @@ The data processing pipeline was originally created on a remote cluster that uti
 
 Run each file from lowest starting number to highest using:
 ```sh
-$ spark-submit #-filename.py
+$ spark-submit \# -filename.py
 ```
 
 3. Data analysis
+
 The data analysis must run after the data processing pipeline, and **visualized_model_erro.ipynb** must be run after **predict_score_old.py**.
 
 4. Predictors
+
 Both **predict_score_old.py** and **predict_score_new.ipynb** must be run after the data processing pipeline
 
 ## Approaches
