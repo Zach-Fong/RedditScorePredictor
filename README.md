@@ -14,14 +14,14 @@ This project is organized into four main sections:
 There is also two score predictors **predict_score_old.py** and **predict_score_new.ipynb**, as well as **report.pdf** which contains a written report of this project excluding the **predict_score_new.ipynb** portion.
 
 ## Getting Started
-1. Install requirements
+1. Installing requirements
 ```sh
 $ pip install -r  requirements.txt
 ```
 
 2. Running the pipeline
 
-The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets we use can be found here: https://github.com/webis-de/webis-tldr-17-corpus.
+The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets used in this project can be found here: https://github.com/webis-de/webis-tldr-17-corpus.
 
 Run each file using:
 ```sh
