@@ -30,7 +30,7 @@ $ spark-submit #-filename.py
 
 3. Data analysis
 
-The data analysis must run after the data processing pipeline, and **visualized_model_erro.ipynb** must be run after **predict_score_old.py**.
+The data analysis must run after the data processing pipeline, and **visualized_model_error.ipynb** must be run after **predict_score_old.py**.
 
 4. Predictors
 
