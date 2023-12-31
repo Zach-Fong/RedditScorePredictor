@@ -23,11 +23,10 @@ $ pip install -r  requirements.txt
 
 The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets used in this project can be found here: https://github.com/webis-de/webis-tldr-17-corpus.
 
-Run each file using:
+Run each file from lowest starting number to highest using:
 ```sh
 $ spark-submit \#-filename.py
 ```
-from lowest starting number to highest.
 
 3. Data analysis
 The data analysis must run after the data processing pipeline, and **visualized_model_erro.ipynb** must be run after **predict_score_old.py**.
