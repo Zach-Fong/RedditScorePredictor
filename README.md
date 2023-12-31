@@ -1,15 +1,37 @@
 # Reddit Score Predictor
 
-This project aims to find out what makes a Reddit post popular and how well we can predict the score of a Reddit post using machine learning. This project consists of three main components: the data processing pipeline (/pipeline), analysis scripts (/analysis), and stored figures (/figures). Additionally, there are two models, **predict_score_old.py** and **predict_score_new.ipynb**.
+This project aims to find out what makes a Reddit post popular and how well we can predict the score of a Reddit post using machine learning. This project consists of three main components: the data processing pipeline (/pipeline), analysis scripts (/analysis), and the score predictors.
 
 ## Project Overview
-This project is organized into three main sections:
+This project is organized into four main sections:
 
 **/pipeline**: the data processing pipeline responsible for cleaning, transforming, and preparing the Reddit data for analysis and modeling
 
 **/analysis**: an investigation into the Reddit Posts dataset, our processed data, and the inital **predict_score_old.py** results. This section provides insights into the characteristics of Reddit posts and their scores.
 
 **/figures**: visualizations from **3-initial_analysis.py** used in our analysis
+
+There is also two score predictors **predict_score_old.py** and **predict_score_new.ipynb**, as well as **report.pdf** which contains a written report of this project excluding the **predict_score_new.ipynb** portion.
+
+## Getting Started
+1. Install requirements
+```sh
+$ pip install -r  requirements.txt
+```
+
+2. Running the pipeline
+
+The data processing pipeline was originally created on a remote cluster that utilized the HDFS, so the pathnames in these files may not be correct. The datasets we use can be found here: https://github.com/webis-de/webis-tldr-17-corpus. Run each file using:
+```sh
+$ spark-submit \#-filename.py
+```
+from lowest starting number to highest.
+
+3. Data analysis
+The data analysis must run after the data processing pipeline, and **visualized_model_erro.ipynb** must be run after **predict_score_old.py**.
+
+4. Predictors
+Both **predict_score_old.py** and **predict_score_new.ipynb** must be run after the data processing pipeline
 
 ## Approaches
 
